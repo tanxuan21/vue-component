@@ -12,6 +12,8 @@
         v-for="item in itemList"
         :key="item.key"
         :initPos="item.initPos"
+        @mousedown="pick"
+        @mouseup="unPick"
       ></DragItem>
     </div>
   </div>
@@ -43,12 +45,20 @@ export default {
         initPos,
       });
     };
+    const pick = (event) => {
+      event.target.classList.add("pick");
+    };
+    const unPick = (event) => {
+      event.target.classList.remove("pick");
+    };
     const itemList = ref([]);
     return {
       dragContainer,
       handleKeyDown,
       itemList,
       handleCreateItem,
+      pick,
+      unPick,
     };
   },
   name: "DragArea",
@@ -68,6 +78,10 @@ export default {
   position: relative;
   .drag-item-container {
     position: absolute;
+    &.pick {
+      z-index: 1;
+    }
+    z-index: 0;
   }
 }
 </style>
