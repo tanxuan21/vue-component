@@ -56,8 +56,8 @@ export default {
         // 拖拽帧
         const HandleMouseMoveFrame = (event) => {
             const mousePos = Geometry.mouseToScreenPosition(event, containerElement);
-            setTop_Left(element, mousePos.y - dragBeginData.InnerItemMousePos.y, mousePos.x - dragBeginData.InnerItemMousePos.x)
-            binding.value(event, mousePos, dragBeginData.InnerItemMousePos);
+            // setTop_Left(element, mousePos.y - dragBeginData.InnerItemMousePos.y, mousePos.x - dragBeginData.InnerItemMousePos.x)
+            binding.value(event, mousePos, dragBeginData.InnerItemMousePos,element);
         }
 
         // 结束拖拽

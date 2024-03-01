@@ -1,7 +1,7 @@
 <template>
   <div class="my-model-container">
     <MyComponent>
-      <!-- <div class="box"></div> -->
+      <div class="box"></div>
     </MyComponent>
   </div>
 </template>
@@ -13,7 +13,7 @@ export default {
     return {};
   },
   components: {
-    MyComponent: textComponents.DragArea,
+    MyComponent: textComponents.scale,
   },
 };
 </script>

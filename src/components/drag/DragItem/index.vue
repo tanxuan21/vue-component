@@ -10,12 +10,21 @@
 import { drag, dragResize } from "@/directive";
 export default {
   setup() {
-    const handleDrag = (e, mousePos, InnerItemMousePos) => {};
-    const handleDragResize = (e) => {
-
+    const setTop_Left = (el, top, left) => {
+      el.style.top = top + "px";
+      el.style.left = left + "px";
     };
+    const handleDrag = (event, mousePos, InnerItemMousePos,el) => {
+      setTop_Left(
+        el,
+        mousePos.y - InnerItemMousePos.y,
+        mousePos.x - InnerItemMousePos.x
+      );
+    };
+    const handleDragResize = (e) => {};
     return {
-      handleDrag,handleDragResize
+      handleDrag,
+      handleDragResize,
     };
   },
   name: "DragItem",

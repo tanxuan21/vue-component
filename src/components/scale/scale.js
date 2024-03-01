@@ -1,6 +1,6 @@
-export const limit_MIN = -300;
-export const limit_MAX = 200;
-export const ratio = .01;
+export const limit_MIN = -600;
+export const limit_MAX = 6000;
+export const ratio = .005;
 // value -> scale 值(工具函数)
 export function map(value) {
 
