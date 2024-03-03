@@ -4,12 +4,12 @@ import whiteBoard from '../components/whiteBoard';
 import icon from '../components/icon';
 import DragArea from '../components/drag/DragArea';
 import scale from '../components/scale';
-
+import SliderBar from '../components/SliderBar';
 export default {
     ListMenu,
     RoundMenu,
     whiteBoard,
     icon,
-    DragArea,
+    DragArea,SliderBar,
     scale,
 }

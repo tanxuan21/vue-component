@@ -3,6 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+// 移除input组件的上下箭头样式
+input[type=number] {
+    -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 @infinite: 2147483647;
 @font-size: 14px;

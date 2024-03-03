@@ -1,7 +1,16 @@
 <template>
   <div class="my-model-container">
-    <MyComponent>
-      <div class="box"></div>
+    <MyComponent :content="'速度'">
+      <!-- <div class="box"></div> -->
+    </MyComponent>
+    <MyComponent :content="'速度'">
+      <!-- <div class="box"></div> -->
+    </MyComponent>
+    <MyComponent :content="'速度'">
+      <!-- <div class="box"></div> -->
+    </MyComponent>
+    <MyComponent :content="'速度'">
+      <!-- <div class="box"></div> -->
     </MyComponent>
   </div>
 </template>
@@ -13,7 +22,7 @@ export default {
     return {};
   },
   components: {
-    MyComponent: textComponents.scale,
+    MyComponent: textComponents.SliderBar,
   },
 };
 </script>
