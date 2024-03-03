@@ -57,7 +57,7 @@ export default {
       }
       left += padding;
       pos.value = { left: `${left}px` };
-      value.value = (left-padding) / (lineGeo.value.width - blockWidth);
+      value.value = ((left-padding) / (lineGeo.value.width - blockWidth)).toFixed(3);
       input.value.value = value.value;
     };
     const drag = (event) => {
@@ -174,8 +174,8 @@ export default {
       &.pick {
         background: @ui-blue;
         border: none;
-        transform: scale(1.1);
-        box-shadow: 0 0 4px 0px @ui-blue;
+        transform: scale(1.2);
+        box-shadow: 0 0 0px 4px fade(@ui-blue,20%);
       }
       border-radius: 5px;
       position: absolute;
