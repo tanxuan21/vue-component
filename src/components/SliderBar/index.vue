@@ -57,7 +57,7 @@ export default {
       }
       left += padding;
       pos.value = { left: `${left}px` };
-      value.value = left / (lineGeo.value.width - blockWidth);
+      value.value = (left-padding) / (lineGeo.value.width - blockWidth);
       input.value.value = value.value;
     };
     const drag = (event) => {
