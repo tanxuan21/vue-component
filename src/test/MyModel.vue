@@ -1,17 +1,6 @@
 <template>
   <div class="my-model-container">
-    <MyComponent :content="'速度'">
-      <!-- <div class="box"></div> -->
-    </MyComponent>
-    <MyComponent :content="'速度'">
-      <!-- <div class="box"></div> -->
-    </MyComponent>
-    <MyComponent :content="'速度'">
-      <!-- <div class="box"></div> -->
-    </MyComponent>
-    <MyComponent :content="'速度'">
-      <!-- <div class="box"></div> -->
-    </MyComponent>
+    <MyComponent></MyComponent>
   </div>
 </template>
 <script>
@@ -19,10 +8,13 @@ import textComponents from "./textComponents";
 
 export default {
   setup() {
-    return {};
+    const addHeight = (h) => {
+      console.log(h);
+    };
+    return { addHeight };
   },
   components: {
-    MyComponent: textComponents.SliderBar,
+    MyComponent: textComponents.DrapDownMenu,
   },
 };
 </script>
@@ -31,6 +23,7 @@ export default {
 @import url(~@/assets/color.less);
 .my-model-container {
   position: relative;
+  padding: 30px;
   height: 80vh;
   width: 80vw;
   box-shadow: 0px 0px 15px 0px #4443;
