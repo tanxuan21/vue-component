@@ -1,9 +1,13 @@
 <template>
   <div class="container">
     <DrawerMenu>
-      <div style="padding: 10px;">
+      <div style="padding: 10px">
         <Switch></Switch>
         <Switch></Switch>
+        <DrapDownMenu
+          :itemArry="['item1', 'item2', 'item3', 'item4']"
+          :defaultItem="'item1'"
+        ></DrapDownMenu>
         <SliderBar :content="'菜单'"></SliderBar>
         <SliderBar :content="'菜单'"></SliderBar>
         <SliderBar :content="'菜单'"></SliderBar>
@@ -38,7 +42,8 @@
 
 <script>
 import DrawerMenu from "./";
-import Switch from '@/components/switch';
+import DrapDownMenu from "@/components/menu/DrapDownMenu";
+import Switch from "@/components/switch";
 import SliderBar from "@/components/SliderBar";
 export default {
   setup(props) {
@@ -48,6 +53,7 @@ export default {
     DrawerMenu,
     SliderBar,
     Switch,
+    DrapDownMenu,
   },
   name: "textContainer",
 };

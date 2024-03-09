@@ -14,7 +14,7 @@ export default {
     return { addHeight };
   },
   components: {
-    MyComponent: textComponents.DrapDownMenu,
+    MyComponent: textComponents.DrawerMenu,
   },
 };
 </script>

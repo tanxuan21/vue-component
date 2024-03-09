@@ -1,7 +1,7 @@
 <template>
   <div class="menu-item-container" @click="handleClick">
-    <icon type="zhankai" v-show="isChoose"></icon>
-    {{ content }}
+    <icon type="tijiaoqueren" :style="{ opacity: isChoose ? 1 : 0 }"></icon>
+    <span class="content">{{ content }}</span>
   </div>
 </template>
 <script>
@@ -9,7 +9,7 @@ import icon from "@/components/icon";
 export default {
   setup(props, context) {
     const handleClick = () => {
-        context.emit("choose",props.content);
+      context.emit("choose", props.content);
     };
     return {
       handleClick,
@@ -33,9 +33,22 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.menu-item-container{
-    .icon-container{
-        font-size: 8px;
-    }
+@import url(~@/assets/color.less);
+.menu-item-container {
+
+  font-size: 14px;
+  padding: 2px;
+  padding-left: 7px;
+  .icon-container {
+    font-size: 12px;
+  }
+  &:hover {
+    background: @ui-blue;
+    border-radius: 3px;
+    color: aliceblue;
+  }
+  .content {
+    margin-left: 5px;
+  }
 }
 </style>
